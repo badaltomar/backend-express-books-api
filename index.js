@@ -6,6 +6,9 @@ app.use(express.json())
 const PORT = 3000
 require('dotenv').config()
 
+const cors = require('cors')
+app.use(cors())
+
 initializedDatabase()
 
 app.get('/books', async (req, res) => {
